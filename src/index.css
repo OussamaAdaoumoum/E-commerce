@@ -1,0 +1,47 @@
+@font-face {
+  font-family: 'Hatolie';
+  font-weight: normal;
+  src: url('./assets/fonts/Hatolie.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Collingar';
+  font-weight: normal;
+  src: url('./assets/fonts/Collingar\ DEMO.otf');
+}
+
+@font-face {
+  font-family: 'Helvetica';
+  font-weight: normal;
+  src: url('./assets/fonts/Helvetica.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Helvetica';
+  font-weight: Bold;
+  src: url('./assets/fonts/Helvetica-Bold.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Stevens';
+  font-weight: normal;
+  src: url('./assets/fonts/Stevens.ttf') format('truetype');
+}
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
