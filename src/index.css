@@ -3,7 +3,6 @@
   font-weight: normal;
   src: url('./assets/fonts/Hatolie.ttf') format('truetype');
 }
-
 @font-face {
   font-family: 'Collingar';
   font-weight: normal;
@@ -17,7 +16,7 @@
 }
 
 @font-face {
-  font-family: 'Helvetica';
+  font-family: 'Helvetica-bold';
   font-weight: Bold;
   src: url('./assets/fonts/Helvetica-Bold.ttf') format('truetype');
 }
@@ -28,11 +27,20 @@
   src: url('./assets/fonts/Stevens.ttf') format('truetype');
 }
 
+
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
+@layer utilities {
+  .pause {
+    animation-play-state: paused;
+  }
+}
+
 body {
+  overflow-x: hidden;
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
