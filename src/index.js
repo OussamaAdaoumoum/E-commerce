@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import reportWebVitals from './reportWebVitals';
 // import ItemStock from './components/Item-Stock/Item-Stock.component';
-import InfinitSlider from './components/Infinit_Slider/Infinit_Slider.component';
+import ItemView from './components/Item-View/Item-View.component';
 import {BrowserRouter} from 'react-router-dom';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
@@ -12,7 +12,7 @@ root.render(
     <BrowserRouter>
       {/* <App /> */}
       {/* <ItemStock /> */}
-      < InfinitSlider/>
+      < ItemView />
     </BrowserRouter>
   </React.StrictMode>
 );

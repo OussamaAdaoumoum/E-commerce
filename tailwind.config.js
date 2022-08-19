@@ -7,6 +7,7 @@ module.exports = {
         redlight: {
           100: "#A33327",
           200: "#a73429",
+          500: "#a33327",
         },
         white: "#FFFFFF",
       },
@@ -14,7 +15,7 @@ module.exports = {
         Hatolie: "Hatolie",
         Collingar: "Collingar",
         Helvetica: "Helvetica",
-        "Helvetica-bold": "Helvetica-bold",
+        Helvetica_bold: "Helvetica-bold",
         Stevens: "Stevens",
       },
       spacing: {
@@ -25,24 +26,23 @@ module.exports = {
         "2xs": "8px",
       },
       keyframes: {
-        slidein : {
-          "0%": { transform: "translateX(0px)"},
+        slidein: {
+          "0%": { transform: "translateX(0px)" },
           "100%": { transform: "translateX(calc(-208px * 10))" },
         },
-        slideout : {
+        slideout: {
           "0%": { transform: "translateX(calc(-208px * 10))" },
-          "100%": { transform: "translateX(0)" },
+          "100%": { transform: "translateX(0px)" },
         },
       },
       animation: {
-        slidein: "slidein 10s linear infinite",
-        slideout: "slideout 10s linear infinite",
+        slidein: "slidein 50s linear infinite",
+        slideout: "slideout 50s linear infinite",
       },
     },
-
   },
   variants: {
-    width: ["responsive", "hover", "focus"]
-},
+    width: ["responsive", "hover", "focus"],
+  },
   plugins: [],
 };
