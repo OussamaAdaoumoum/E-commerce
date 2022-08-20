@@ -1,13 +1,13 @@
 import logo from "../../assets/carditem.jpg";
 import logo1 from "../../assets/carditemHover.jpg";
 import {Link} from 'react-router-dom';
-
+import { GrClose } from "react-icons/gr";
 function ItemView() {
   return (
     <>
     <div className=" py-6 sm:py-8 lg:py-12">
-      <div className="max-w-[70vw] bg-[#D9D9D9] px-4 md:px-8 mx-auto rounded-lg">
-        <div className="grid md:grid-cols-2 gap-8">
+      <div className="max-w-[70vw] bg-[#D9D9D9] px-4 md:px-8 mx-auto rounded-lg relative ">
+        <div className=" grid md:grid-cols-2 gap-8">
           {/* <!-- images - start --> */}
           <div className="grid lg:grid-cols-5 gap-4">
             <div className="lg:col-span-4 bg-[#D9D9D9]  overflow-hidden relative">
@@ -25,10 +25,9 @@ function ItemView() {
 
               <div className="bg-[#D9D9D9] rounded-lg overflow-hidden">
                 <img src={logo1} loading="lazy" alt="pics not found" className="w-full h-full object-cover object-center" />
+
               </div>
             </div>
-
-
           </div>
           {/* <!-- images - end --> */}
 
@@ -101,7 +100,11 @@ function ItemView() {
             {/* <!-- buttons - end --> */}
           </div>
           {/* <!-- content - end --> */}
+
+
         </div>
+        <div className="absolute top-2 right-2 rounded-full bg-gray-500 p-1  "> <GrClose  />
+          </div>
       </div>
     </div>
 

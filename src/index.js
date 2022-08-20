@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import reportWebVitals from './reportWebVitals';
 // import ItemStock from './components/Item-Stock/Item-Stock.component';
-import ItemView from './components/Item-View/Item-View.component';
+import SignUp from './components/SignUp-Form/SignUp.component';
 import {BrowserRouter} from 'react-router-dom';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
@@ -11,8 +11,8 @@ root.render(
   <React.StrictMode>
     <BrowserRouter>
       {/* <App /> */}
-      {/* <ItemStock /> */}
-      < ItemView />
+      <SignUp />
+
     </BrowserRouter>
   </React.StrictMode>
 );
