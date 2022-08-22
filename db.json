@@ -1,5 +1,109 @@
 {
+    "Category": [
+      {
+        "Name": "WOMENS",
+        "pic": "https://www.americanvintage-store.com/dw/image/v2/BGNV_PRD/on/demandware.static/-/Sites-master-catalog/default/dwef06cd29/images/productPictures/H22/JAC51H22/JAC51H22-NAVY-MODEL-1-large.jpg?sw=720&sh=1125",
+        "id": 1
+      },
+      {
+        "Name": "MENS",
+        "pic": "https://www.americanvintage-store.com/dw/image/v2/BGNV_PRD/on/demandware.static/-/Sites-master-catalog/default/dwcc10e3d1/images/productPictures/H22/MWIP56H22/MWIP56H22-STONEP-MODEL-4-large.jpg?sw=720&sh=1125",
+        "id": 2
+      },
+      {
+        "Name": "SHOES",
+        "pic": "https://www.americanvintage-store.com/dw/image/v2/BGNV_PRD/on/demandware.static/-/Sites-master-catalog/default/dw10dd715c/images/productPictures/H22/TAB10BH22/TAB10BH22-GRISCH-MODEL-1-large.jpg?sw=720&sh=1125",
+        "id": 3
+      },
+      {
+        "Name": "BAGS",
+        "pic": "https://www.americanvintage-store.com/dw/image/v2/BGNV_PRD/on/demandware.static/-/Sites-master-catalog/default/dwf3120621/images/productPictures/H22/PADO137H22/PADO137H22-MAST-MODEL-3-large.jpg?sw=720&sh=1125",
+        "id": 4
+      }
+
+      
+    ],
     "Mens": [
+      {
+        "Name": "JSON SERVER",
+        "pic": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0e/Tree_example_VIS.jpg/1024px-Tree_example_VIS.jpg",
+        "picHover": "../../assets/carditemHover.jpg",
+        "price": "50.00",
+        "id": 1
+      },
+      { 
+        "Name": "JSON SERVER",
+        "pic": "./src/assets/carditem.jpg",
+        "picHover": "./src/assets/carditemHover.jpg",
+        "price": "60.00",
+        "id": 2
+      },
+      {
+        "Name": "JSON SERVER",
+        "pic": "./src/assets/carditem.jpg",
+        "picHover": "./src/assets/carditemHover.jpg",
+        "price": "70.00",
+        "id": 3
+      },
+      {
+        "Name": "JSON SERVER",
+        "pic": "./src/assets/carditem.jpg",
+        "picHover": "./src/assets/carditemHover.jpg",
+        "price": "80.00",
+        "id": 4
+      },
+      {
+        "Name": "JSON SERVER",
+        "pic": "./src/assets/carditem.jpg",
+        "picHover": "./src/assets/carditemHover.jpg",
+        "price": "80.00",
+        "id": 5
+      },
+      {
+        "Name": "JSON SERVER",
+        "pic": "./src/assets/carditem.jpg",
+        "picHover": "./src/assets/carditemHover.jpg",
+        "price": "80.00",
+        "id": 6
+      },
+      {
+        "Name": "JSON SERVER",
+        "pic": "./src/assets/carditem.jpg",
+        "picHover": "./src/assets/carditemHover.jpg",
+        "price": "80.00",
+        "id": 7
+      },
+      {
+        "Name": "JSON SERVER",
+        "pic": "./src/assets/carditem.jpg",
+        "picHover": "./src/assets/carditemHover.jpg",
+        "price": "80.00",
+        "id": 8
+      },
+      {
+        "Name": "JSON SERVER",
+        "pic": "./src/assets/carditem.jpg",
+        "picHover": "./src/assets/carditemHover.jpg",
+        "price": "80.00",
+        "id": 9
+      },
+      {
+        "Name": "JSON SERVER",
+        "pic": "./src/assets/carditem.jpg",
+        "picHover": "./src/assets/carditemHover.jpg",
+        "price": "80.00",
+        "id": 10
+      },
+      {
+        "Name": "JSON SERVER",
+        "pic": "./src/assets/carditem.jpg",
+        "picHover": "./src/assets/carditemHover.jpg",
+        "price": "80.00",
+        "id": 11
+      }
+    ],
+    
+    "Shoes": [
       {
         "Name": "JSON SERVER",
         "pic": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0e/Tree_example_VIS.jpg/1024px-Tree_example_VIS.jpg",

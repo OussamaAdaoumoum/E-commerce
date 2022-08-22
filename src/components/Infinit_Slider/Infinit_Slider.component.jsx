@@ -5,8 +5,7 @@ import Logo2 from '../../assets/shoes.jpg';
 function InfinitSlider() {
   return (
     <>
-    {/* <div className='flex flex-row justify-center  w-screen'> */}
-
+    <div className='flex flex-row w-full relative'>
       <div className="flex w-[calc(208px * 20)] animate-slidein overflow-hiden  hover:z-10 absolute hover:pause m-auto h-64 ">
         <img src={Logo} alt="hoverImage" className=" w-52 h-64 block hover:scale-125  "/> 
         <img src={Logo1} alt="hoverImage" className=" w-52 h-64 block hover:scale-125  "/>
@@ -53,7 +52,7 @@ function InfinitSlider() {
         <img src={Logo2} alt="hoverImage" className="w-52 h-64 block hover:scale-125 "/> 
         <img src={Logo} alt="hoverImage" className="w-52 h-64 block hover:scale-125 "/> 
         <img src={Logo1} alt="hoverImage" className="w-52 h-64 block hover:scale-125 "/> 
-      {/* </div> */}
+      </div>
 </div>
     </>
   );
