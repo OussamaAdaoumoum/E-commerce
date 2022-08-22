@@ -5,7 +5,7 @@ function Map() {
   const center = useMemo(() => ({ lat: 44, lng: -80 }), []);
 
   return (
-    <GoogleMap zoom={10} center={center} mapContainerClassName="w-48 h-36 rounded-md ">
+    <GoogleMap zoom={10} center={center} mapContainerClassName="w-52 h-36 dark:bg-white bg-white  rounded-md ">
       <Marker position={center} />
     </GoogleMap>
   );
@@ -16,7 +16,7 @@ export default function Home() {
     
   });
 
-  if (!isLoaded) return <div>Loading...</div>;
+  if (!isLoaded) return <div className="text-white">Loading...</div>;
   return <Map />;
 }
 

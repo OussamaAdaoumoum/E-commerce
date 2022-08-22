@@ -3,7 +3,9 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import reportWebVitals from './reportWebVitals';
 // import ItemStock from './components/Item-Stock/Item-Stock.component';
-import SignUp from './components/SignUp-Form/SignUp.component';
+
+// import Home from './routes/Home/Home';
+import Mens from './routes/Category/Mens/Mens';
 import {BrowserRouter} from 'react-router-dom';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
@@ -11,8 +13,8 @@ root.render(
   <React.StrictMode>
     <BrowserRouter>
       {/* <App /> */}
-      <SignUp />
-
+      {/* <Home /> */}
+      <Mens />
     </BrowserRouter>
   </React.StrictMode>
 );

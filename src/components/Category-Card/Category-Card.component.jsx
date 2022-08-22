@@ -4,8 +4,7 @@ import logo from "../../assets/carditem.jpg";
 function CategoryCard() {
   return (
     <>
-      <div className="category-container">
-        <div className="flex flex-wrap flex-col font-Hatolie center content-center justify-center h-screen items-center">
+        {/* <div className=" flex flex-wrap flex-col h-auto font-Hatolie  content-center justify-center items-center "> */}
           <div className="group relative">
             <img
               className="w-298 h-452 group-hover:opacity-70 duration-300 rounded-lg"
@@ -22,8 +21,7 @@ function CategoryCard() {
               </Link>
             </div>
           </div>
-        </div>
-      </div>
+        {/* </div> */}
     </>
   );
 }

@@ -1,3 +1,13 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer utilities {
+  .pause {
+    animation-play-state: paused;
+  }
+}
+
 @font-face {
   font-family: 'Hatolie';
   font-weight: normal;
@@ -29,15 +39,6 @@
 
 
 
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
-
-@layer utilities {
-  .pause {
-    animation-play-state: paused;
-  }
-}
 
 body {
   overflow-x: hidden;
@@ -47,6 +48,9 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+
+  background-color: black;
+  
 }
 
 code {

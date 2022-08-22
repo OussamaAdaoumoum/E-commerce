@@ -4,7 +4,7 @@ import { ReactComponent as YourSvg } from "../../../assets/Loop.svg";
 function NavBar() {
   return (
     <>
-      <nav className=" px-4 lg:px-6 py-2.5 ">
+      <nav className=" px-4 lg:px-6 py-2.5 w-full">
         <div className="flex flex-wrap justify-between items-center  mx-auto max-w-screen-xl font-Collingar">
           <Link to="/">
             <YourSvg className="mr-3 h-6 sm:h-9" alt="Logo" />
