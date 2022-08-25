@@ -35,16 +35,16 @@ function Footer(){
                         <Link className="transition duration-200 hover:text-redlight-100 text-black dark:text-white" to="/" >Shop</Link>
                         </li>
                         <li>
-                        <Link className="transition duration-200 hover:text-redlight-100 text-black dark:text-white" to="/" >Men</Link>
+                        <Link className="transition duration-200 hover:text-redlight-100 text-black dark:text-white" to="/Mens" >Mens</Link>
                         </li>
                         <li>
-                        <Link className="transition duration-200 hover:text-redlight-100 text-black dark:text-white" to="/" >Women</Link>
+                        <Link className="transition duration-200 hover:text-redlight-100 text-black dark:text-white" to="/Womens" >Womens</Link>
                         </li>
                         <li>
-                        <Link className="transition duration-200 hover:text-redlight-100 text-black dark:text-white " to="/" >Shoes</Link>
+                        <Link className="transition duration-200 hover:text-redlight-100 text-black dark:text-white " to="/Shoes" >Shoes</Link>
                         </li>
                         <li>
-                        <Link className="transition duration-200 hover:text-redlight-100 text-black dark:text-white" to="/" >Bags</Link>
+                        <Link className="transition duration-200 hover:text-redlight-100 text-black dark:text-white" to="/Bags" >Bags</Link>
                         </li>
                     </ul>
                 </div>

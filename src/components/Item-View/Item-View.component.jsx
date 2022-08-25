@@ -1,9 +1,10 @@
-import logo from "../../assets/carditem.jpg";
-import logo1 from "../../assets/carditemHover.jpg";
 import { Link } from "react-router-dom";
 import { GrClose } from "react-icons/gr";
 
+
 function ItemView({ handleModal, pics }) {
+
+
   return (
     <>
       <div className=" py-6 sm:py-8 lg:py-12">
@@ -17,7 +18,7 @@ function ItemView({ handleModal, pics }) {
                   loading="lazy"
                   alt="pics not found"
                   className="w-full h-full rounded-lg object-cover object-center"
-                />
+                  />
               </div>
 
               <div className="flex lg:flex-col order-last lg:order-none gap-4">
@@ -167,12 +168,11 @@ function ItemView({ handleModal, pics }) {
 
               {/* <!-- buttons - start --> */}
               <div className="flex gap-2.5 justify-center">
-                <Link
-                  to="/"
+                <button
                   className="inline-block flex-1 sm:flex-none bg-redlight-100 hover:bg-redlight-200 active:bg-redlight-500 focus-visible:ring ring-indigo-300 text-white text-sm md:text-base font-semibold text-center rounded-lg outline-none transition duration-100 px-8 py-3"
                 >
                   Add to cart
-                </Link>
+                </button>
 
                 <Link
                   to="/"

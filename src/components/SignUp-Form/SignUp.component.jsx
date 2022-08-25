@@ -1,32 +1,42 @@
 import { Link } from "react-router-dom";
 
+import { signInWithGoogle, registerWithEmailAndPassword } from "../../assets/firebase/firebase";
+import React, { useState } from "react";
+
 function SignUp() {
+  const [name, setName] = useState("");
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+
+
+
   return (
     <>
-      <div class="bg-blueGray-50">
-        <div class="w-full lg:w-4/12 px-4 mx-auto pt-6 ">
-          <div class="relative flex flex-col min-w-0 break-words w-full mb-6 shadow-lg rounded-lg bg-[#D9D9D9] border-0">
-            <div class="rounded-t mb-0 px-6 py-6">
-              <div class="text-center mb-3">
-                <h6 class="text-blueGray-500 text-sm font-Stevens ">
+      <div className="bg-blueGray-50">
+        <div className="w-full lg:w-4/12 px-4 mx-auto pt-6 ">
+          <div className="relative flex flex-col min-w-0 break-words w-full mb-6 shadow-lg rounded-lg bg-[#D9D9D9] border-0">
+            <div className="rounded-t mb-0 px-6 py-6">
+              <div className="text-center mb-3">
+                <h6 className="text-blueGray-500 text-sm font-Stevens ">
                   Sign Up with
                 </h6>
               </div>
-              <div class="btn-wrapper text-center">
+              <div className="btn-wrapper text-center">
                 <button
-                  class="bg-white active:bg-blueGray-50 text-blueGray-700  px-4 py-2 rounded outline-none focus:outline-none mr-2 mb-1 uppercase shadow hover:shadow-md inline-flex items-center font-bold text-xs ease-linear transition-all duration-150"
+                  className="bg-white active:bg-blueGray-50 text-blueGray-700  px-4 py-2 rounded outline-none focus:outline-none mr-2 mb-1 uppercase shadow hover:shadow-md inline-flex items-center font-bold text-xs ease-linear transition-all duration-150"
                   type="button"
                 >
                   <img
                     alt="..."
-                    class="w-5 mr-1"
+                    className="w-5 mr-1"
                     src="https://demos.creative-tim.com/notus-js/assets/img/github.svg"
                   />
                   Github
                 </button>
                 <button
-                  class="bg-white active:bg-blueGray-50 text-blueGray-700 px-4 py-2 rounded outline-none focus:outline-none mr-1 mb-1 uppercase shadow hover:shadow-md inline-flex items-center font-bold text-xs ease-linear transition-all duration-150"
+                  className="bg-white active:bg-blueGray-50 text-blueGray-700 px-4 py-2 rounded outline-none focus:outline-none mr-1 mb-1 uppercase shadow hover:shadow-md inline-flex items-center font-bold text-xs ease-linear transition-all duration-150"
                   type="button"
+                  onClick={signInWithGoogle}
                 >
                   <img
                     alt="..."
@@ -34,6 +44,7 @@ function SignUp() {
                     src="https://demos.creative-tim.com/notus-js/assets/img/google.svg"
                   />
                   Google{" "}
+                  
                 </button>
               </div>
               <hr class="mt-6 border-b-1 border-blueGray-300" />
@@ -45,52 +56,54 @@ function SignUp() {
               <form>
                 <div class="relative w-full mb-3">
                   <input
-                    type="email"
-                    class="font-Stevens text-xs border-0 px-3 py-3 placeholder-blueGray-300 text-blueGray-600 bg-white rounded shadow focus:outline-none focus:ring w-full ease-linear transition-all duration-150"
-                    placeholder="Full Name"
+                    type="name"
+                    placeholder="Full name"
+                    value={name}
+                    onChange={(e) => setName(e.target.value)}
+                    className="font-Stevens text-xs border-0 px-3 py-3 placeholder-blueGray-300 text-blueGray-600 bg-white rounded shadow focus:outline-none focus:ring w-full ease-linear transition-all duration-150"
                   />
                 </div>
-                <div class="relative w-full mb-3">
+                <div className="relative w-full mb-3">
                   <input
                     type="email"
-                    class="font-Stevens text-xs border-0 px-3 py-3 placeholder-blueGray-300 text-blueGray-600 bg-white rounded shadow focus:outline-none focus:ring w-full ease-linear transition-all duration-150"
-                    placeholder="Email"
+                    placeholder="Enter email"
+                    value={email}
+                    onChange={(e) => setEmail(e.target.value)}
+                    className="font-Stevens text-xs border-0 px-3 py-3 placeholder-blueGray-300 text-blueGray-600 bg-white rounded shadow focus:outline-none focus:ring w-full ease-linear transition-all duration-150"
                   />
                 </div>
-                <div class="relative w-full mb-3">
+                <div className="relative w-full mb-3">
                   <input
                     type="password"
-                    class="font-Stevens text-xs border-0 px-3 py-3 placeholder-blueGray-300 text-blueGray-600 bg-white rounded shadow focus:outline-none focus:ring w-full ease-linear transition-all duration-150"
                     placeholder="Password"
-                  />
-                </div>
-                <div class="relative w-full mb-3">
-                  <input
-                    type="password"
-                    class="font-Stevens text-xs border-0 px-3 py-3 placeholder-blueGray-300 text-blueGray-600 bg-white rounded shadow focus:outline-none focus:ring w-full ease-linear transition-all duration-150"
-                    placeholder="Confirm Password"
+                    value={password}
+                    onChange={(e) => setPassword(e.target.value)}
+                    className="font-Stevens text-xs border-0 px-3 py-3 placeholder-blueGray-300 text-blueGray-600 bg-white rounded shadow focus:outline-none focus:ring w-full ease-linear transition-all duration-150"
                   />
                 </div>
                 <div>
-                  <label class="flex cursor-pointer justify-end ">
-                    <span className="font-Stevens text-xs">
+                  <label className="flex cursor-pointer justify-end ">
+                    <span classNameName="font-Stevens text-xs">
                       already have account ?{" "}
                       <Link
                         to="/SignIn"
-                        className="text-blue-600 hover:underline"
+                        classNameName="text-blue-600 hover:underline"
                       >
                         SIGN IN
                       </Link>{" "}
                     </span>
                   </label>
                 </div>
-                <div class="text-center mt-6">
+                <div className="text-center mt-6">
                   <button
-                    class="bg-blueGray-800 text-white active:bg-blueGray-600  bg-redlight-100 text-sm font-bold uppercase px-6 py-3 rounded shadow hover:shadow-lg outline-none focus:outline-none mr-1 mb-1 w-full ease-linear transition-all duration-150 font-Collingar"
-                    type="button"
+                    className="bg-blueGray-800 text-white active:bg-blueGray-600  bg-redlight-100 text-sm font-bold uppercase px-6 py-3 rounded shadow hover:shadow-lg outline-none focus:outline-none mr-1 mb-1 w-full ease-linear transition-all duration-150 font-Collingar"
+                    type="submit"
+                    onClick={() => {
+                      registerWithEmailAndPassword(name, email, password);
+                    }}
                   >
                     {" "}
-                    Sign In{" "}
+                    Sign Up{" "}
                   </button>
                 </div>
               </form>

@@ -1,7 +1,17 @@
 import { Link } from "react-router-dom";
-import { ReactComponent as YourSvg } from "../../../assets/Loop.svg";
+import { ReactComponent as YourSvg } from "../../../assets/pics/Loop.svg";
+import { useState, useEffect } from "react";
+import firebase from "../../../assets/firebase/firebase";
 
 function NavBar() {
+  const [user, setUser] = useState(null);
+
+  useEffect(() => {
+    firebase.auth().onAuthStateChanged((user) => {
+      setUser(user);
+    });
+  }, []);
+
   return (
     <>
       <nav className=" px-4 lg:px-6 py-2.5 w-full">
@@ -27,58 +37,67 @@ function NavBar() {
               <li>
                 <Link
                   className="block transition duration-500 text-redlight-100  hover:bg-redlight-200 rounded-lg text-sm px-3 lg:px-4.75 py-1 lg:py-1 mr-0.5 hover:text-white dark:hover:text-white dark:hover:bg-redlight-200 focus:outline-none"
-                  to="/"
+                  to="/Shop"
                 >
-                  Company
+                  Shop
                 </Link>
               </li>
               <li>
                 <Link
                   className="block transition duration-500 text-redlight-100  hover:bg-redlight-200 rounded-lg text-sm px-3 lg:px-4.75 py-1 lg:py-1 mr-0.5 hover:text-white dark:hover:text-white dark:hover:bg-redlight-200 focus:outline-none "
-                  to="/"
+                  to="/Mens"
                 >
-                  Marketplace
+                  Mens
                 </Link>
               </li>
               <li>
                 <Link
                   className="block transition duration-500 text-redlight-100  hover:bg-redlight-200 rounded-lg text-sm px-3 lg:px-4.75 py-1 lg:py-1 mr-0.5 hover:text-white dark:hover:text-white dark:hover:bg-redlight-200 focus:outline-none"
-                  to="/"
+                  to="/Womens"
                 >
-                  Features
+                  Womens
                 </Link>
               </li>
               <li>
                 <Link
                   className="block transition duration-500 text-redlight-100  hover:bg-redlight-200 rounded-lg text-sm px-3 lg:px-4.75 py-1 lg:py-1 mr-0.5 hover:text-white dark:hover:text-white dark:hover:bg-redlight-200 focus:outline-none"
-                  to="/"
+                  to="/Bags"
                 >
-                  Team
+                  Bags
                 </Link>
               </li>
               <li>
                 <Link
                   className="block transition duration-500 text-redlight-100  hover:bg-redlight-200 rounded-lg text-sm px-3 lg:px-4.75 py-1 lg:py-1 mr-0.5 hover:text-white dark:hover:text-white dark:hover:bg-redlight-200 focus:outline-none"
-                  to="/"
+                  to="/Shoes"
                 >
-                  Contact
+                  Shoes
                 </Link>
               </li>
             </ul>
           </div>
           <div className="flex items-center lg:order-2">
-            <Link
-              className="transition duration-500 text-redlight-100 dark:text-redlight-100 hover:bg-redlight-100 hover:text-white rounded-lg text-sm px-3 lg:px-4.75 py-1 lg:py-1.25 mr-2 dark:hover:bg-redlight-200 focus:outline-none "
-              to="/LogIn"
-            >
-              Log in
-            </Link>
-            <Link
-              className="transition duration-500 text-white bg-redlight-100 hover:bg-redlight-200 rounded-lg text-sm px-3 lg:px-4.75 py-1 lg:py-1.25 mr-2 dark:bg-redlight-100 dark:hover:bg-redlight-200 focus:outline-none "
-              to="/SignUp"
-            >
-              Register
-            </Link>
+            {/* for log in  */}
+            {user ? 
+              <>
+                <div>utgiu</div>
+            </>             : 
+              <>
+                <Link
+                  className="transition duration-500 text-redlight-100 dark:text-redlight-100 hover:bg-redlight-100 hover:text-white rounded-lg text-sm px-3 lg:px-4.75 py-1 lg:py-1.25 mr-2 dark:hover:bg-redlight-200 focus:outline-none "
+                  to="/LogIn"
+                >
+                  Log in
+                </Link>
+                <Link
+                  className="transition duration-500 text-white bg-redlight-100 hover:bg-redlight-200 rounded-lg text-sm px-3 lg:px-4.75 py-1 lg:py-1.25 mr-2 dark:bg-redlight-100 dark:hover:bg-redlight-200 focus:outline-none "
+                  to="/SignUp"
+                >
+                  Register
+                </Link>
+              </>
+            }
+
             {/* <button data-collapse-toggle="mobile-menu-2" type="button" className="inline-flex items-center p-2 ml-1 text-sm text-gray-500 rounded-lg lg:hidden hover:bg-gray-100 focus:outline-none focus:ring-2  dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600" aria-controls="mobile-menu-2" aria-expanded="false">
                         <span className="sr-only">Open main menu</span>
                         <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z" clip-rule="evenodd"></path></svg>

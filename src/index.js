@@ -3,18 +3,18 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import reportWebVitals from './reportWebVitals';
 // import ItemStock from './components/Item-Stock/Item-Stock.component';
-
+import App from './App';
 // import Home from './routes/Home/Home';
-import Mens from './routes/Category/Mens/Mens';
+// import LogIn from './routes/LogIn/LogIn';
 import {BrowserRouter} from 'react-router-dom';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
     <BrowserRouter>
-      {/* <App /> */}
+      <App />
       {/* <Home /> */}
-      <Mens />
+      {/* <LogIn /> */}
     </BrowserRouter>
   </React.StrictMode>
 );
