@@ -42,7 +42,7 @@ function ItemView({ handleModal, card }) {
 
     window._items = querySnapshot.docs;
     // const cartItems = querySnapshot.docs.forEach((item) => item.data());
-    let changed = 0;
+    let changed = false;
     querySnapshot.docs.forEach((item) => {
       console.log("item data ", item);
       if (item.data().cartId === card.id) {
@@ -52,10 +52,10 @@ function ItemView({ handleModal, card }) {
         // item.update({
         //   itemsNbr: increment(1),
         // });
-        changed = 1;
+        changed = true;
       }
     });
-    if (changed === 0) {
+    if (!changed) {
       addDoc(getUserCart, {
         cartId: card.id,
         itemsNbr: 1,
