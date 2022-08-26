@@ -21,7 +21,15 @@ function Mens() {
   const fetchData = async () => {
     await fetch("http://localhost:3000/Mens")
       .then((response) => response.json())
-      .then(async (data) => {        
+      .then(async (data) => {
+    //    const col = collection(getFirestore(), "items");
+   //     const o = getDocs(col);
+      
+          data.forEach((el) => {
+            const d = doc(getFirestore(), "items", "" + el.id);
+            setDoc(d, el);
+          });
+        
         return setItems(data);
       })
       .catch((error) => console.log(error));

@@ -1,20 +1,15 @@
-import React from 'react';
-import ReactDOM from 'react-dom/client';
-import './index.css';
-import reportWebVitals from './reportWebVitals';
-// import ItemStock from './components/Item-Stock/Item-Stock.component';
-import App from './App';
-// import Home from './routes/Home/Home';
-// import LogIn from './routes/LogIn/LogIn';
-import {BrowserRouter} from 'react-router-dom';
+import React from "react";
+import ReactDOM from "react-dom/client";
+import "./index.css";
+import reportWebVitals from "./reportWebVitals";
+import App from "./App";
+import { BrowserRouter } from "react-router-dom";
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
+const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
     <BrowserRouter>
       <App />
-      {/* <Home /> */}
-      {/* <LogIn /> */}
     </BrowserRouter>
   </React.StrictMode>
 );

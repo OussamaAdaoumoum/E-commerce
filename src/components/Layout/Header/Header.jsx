@@ -9,8 +9,9 @@ function NavBar() {
   useEffect(() => {
     firebase.auth().onAuthStateChanged((user) => {
       setUser(user);
+      console.log(user.id);
     });
-  }, []);
+  }, []); 
 
   return (
     <>

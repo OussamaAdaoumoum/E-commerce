@@ -7,7 +7,9 @@ import Bags from './routes/Category/Bags/Bags';
 import Shoes from './routes/Category/Shoes/Shoes';
 import LogIn from './routes/LogIn/LogIn';
 import SignUp from './routes/SignUp/SignUp';
+import ItemStock from "./components/Item-Stock/Item-Stock.component";
 function App() {
+
   return (
     <>
         <Routes>
@@ -17,9 +19,10 @@ function App() {
           <Route path="/Womens" element={<Womens />} />
           <Route path="/Bags" element={<Bags />} />
           <Route path="/Shoes" element={<Shoes />} />
+          
           <Route path="/LogIn" element={<LogIn />} />
           <Route path="/SignUp" element={<SignUp />} />
-
+          <Route path="/ItemStock" element={<ItemStock />} />
           {/* <Route path="*" element={<Home />} /> */}
         </Routes>
     </>

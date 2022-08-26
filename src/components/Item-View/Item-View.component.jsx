@@ -1,9 +1,71 @@
 import { Link } from "react-router-dom";
 import { GrClose } from "react-icons/gr";
 
+import firebase from "firebase/compat/app";
+import {
+  getFirestore,
+  collection,
+  addDoc,
+  where,
+  query,
+  getDocs,
+  doc,
+  increment,
+  setDoc,
+  updateDoc,
+} from "firebase/firestore";
 
-function ItemView({ handleModal, pics }) {
+import { useState, useEffect } from "react";
 
+function ItemView({ handleModal, card }) {
+  const [user, setUser] = useState(null);
+
+  useEffect(() => {
+    firebase.auth().onAuthStateChanged((user) => {
+      setUser(user);
+      console.log("rah kheddama ", user);
+    });
+  }, []);
+
+  // Get ID
+
+  const addToCard = async () => {
+    //     const col = collection(getFirestore(), "items");
+    //     const o = getDocs(col);
+
+    const currentUser = doc(getFirestore(), "users", user.uid);
+    const getUserCart = collection(currentUser, "cart");
+    const q = query(getUserCart);
+    const querySnapshot = await getDocs(q);
+
+    // const getCartDocs = getDocs(getUserCart);
+
+    window._items = querySnapshot.docs;
+    // const cartItems = querySnapshot.docs.forEach((item) => item.data());
+    let changed = 0;
+    querySnapshot.docs.forEach((item) => {
+      console.log("item data ", item);
+      if (item.data().cartId === card.id) {
+        updateDoc(item.ref, {
+          itemsNbr: increment(1),
+        });
+        // item.update({
+        //   itemsNbr: increment(1),
+        // });
+        changed = 1;
+      }
+    });
+    if (changed === 0) {
+      addDoc(getUserCart, {
+        cartId: card.id,
+        itemsNbr: 1,
+      });
+    }
+
+    //   washingtonRef.update({
+    //     population: firebase.firestore.FieldValue.increment(50)
+    // });
+  };
 
   return (
     <>
@@ -14,17 +76,17 @@ function ItemView({ handleModal, pics }) {
             <div className="grid lg:grid-cols-5 gap-4">
               <div className="lg:col-span-4 bg-[#D9D9D9]  overflow-hidden relative">
                 <img
-                  src={pics.pic1}
+                  src={card.pic1}
                   loading="lazy"
                   alt="pics not found"
                   className="w-full h-full rounded-lg object-cover object-center"
-                  />
+                />
               </div>
 
               <div className="flex lg:flex-col order-last lg:order-none gap-4">
                 <div className="bg-[#D9D9D9] rounded-lg overflow-hidden">
                   <img
-                    src={pics.pic2}
+                    src={card.pic2}
                     loading="lazy"
                     alt="pics not found"
                     className="w-full h-full object-cover object-center"
@@ -33,7 +95,7 @@ function ItemView({ handleModal, pics }) {
 
                 <div className="bg-[#D9D9D9] rounded-lg overflow-hidden">
                   <img
-                    src={pics.pic3}
+                    src={card.pic3}
                     loading="lazy"
                     alt="pics not found"
                     className="w-full h-full object-cover object-center"
@@ -42,7 +104,7 @@ function ItemView({ handleModal, pics }) {
 
                 <div className="bg-[#D9D9D9] rounded-lg overflow-hidden">
                   <img
-                    src={pics.pic4}
+                    src={card.pic4}
                     loading="lazy"
                     alt="pics not found"
                     className="w-full h-full object-cover object-center"
@@ -169,6 +231,7 @@ function ItemView({ handleModal, pics }) {
               {/* <!-- buttons - start --> */}
               <div className="flex gap-2.5 justify-center">
                 <button
+                  onClick={addToCard}
                   className="inline-block flex-1 sm:flex-none bg-redlight-100 hover:bg-redlight-200 active:bg-redlight-500 focus-visible:ring ring-indigo-300 text-white text-sm md:text-base font-semibold text-center rounded-lg outline-none transition duration-100 px-8 py-3"
                 >
                   Add to cart

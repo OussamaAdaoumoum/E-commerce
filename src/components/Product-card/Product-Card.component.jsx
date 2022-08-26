@@ -21,7 +21,7 @@ function ProductCard({card}){
                         <button className="absolute transition duration-500 text-redlight-100  hover:bg-redlight-200 rounded-lg text-sm px-3 lg:px-4.75 py-1 lg:py-1 mr-0.5 hover:text-white dark:hover:text-white dark:hover:bg-redlight-200 focus:outline-none"  
                         onClick={() => setIsOpen(true)} >Product</button>
                         <Modal open={isOpen}>
-                        <ItemView handleModal={handleModal} pics={card}/>
+                        <ItemView handleModal={handleModal} card={card}/>
                             </Modal>
 
                     </div> 

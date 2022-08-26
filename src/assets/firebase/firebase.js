@@ -1,5 +1,5 @@
 import firebase from "firebase/compat/app";
-import { getFirestore, collection, addDoc, where, query, getDocs} from "firebase/firestore"
+import { getFirestore, collection, addDoc, where,doc,  query, getDocs, setDoc} from "firebase/firestore"
 import "firebase/compat/auth";
 
 const firebaseConfig = {
@@ -28,7 +28,7 @@ export const signInWithGoogle = async () => {
     const userRef = collection(db, "users");
     const result = await getDocs(query(userRef, where("uid", "==", user.uid)));
     if (result.empty) {
-      await addDoc(collection(db, "users"), {
+      await setDoc(doc(db, "users", user.uid), {
         uid: user.uid,
         name: user.displayName,
         authProvider: "google",
