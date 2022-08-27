@@ -23,7 +23,7 @@ function ItemView({ handleModal, card }) {
   useEffect(() => {
     firebase.auth().onAuthStateChanged((user) => {
       setUser(user);
-      console.log("rah kheddama ", user);
+      // console.log("rah kheddama ", user);
     });
   }, []);
 

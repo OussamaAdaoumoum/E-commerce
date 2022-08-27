@@ -6,8 +6,8 @@ import Womens from './routes/Category/Womens/Womens';
 import Bags from './routes/Category/Bags/Bags';
 import Shoes from './routes/Category/Shoes/Shoes';
 import LogIn from './routes/LogIn/LogIn';
-import SignUp from './routes/SignUp/SignUp';
-import ItemStock from "./components/Item-Stock/Item-Stock.component";
+import Register from './routes/SignUp/SignUp';
+import Stock from "./routes/Stock/Stock";
 function App() {
 
   return (
@@ -19,11 +19,12 @@ function App() {
           <Route path="/Womens" element={<Womens />} />
           <Route path="/Bags" element={<Bags />} />
           <Route path="/Shoes" element={<Shoes />} />
-          
+          <Route path="/Stock" element={<Stock />} />          
           <Route path="/LogIn" element={<LogIn />} />
-          <Route path="/SignUp" element={<SignUp />} />
-          <Route path="/ItemStock" element={<ItemStock />} />
-          {/* <Route path="*" element={<Home />} /> */}
+          <Route path="/SignUp" element={<Register />} />
+
+          
+          <Route path="*" element={<Home />} />
         </Routes>
     </>
   );

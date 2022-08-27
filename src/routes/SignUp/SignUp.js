@@ -1,24 +1,24 @@
-import { useState, useEffect } from 'react';
-import firebase  from '../../assets/firebase/firebase';
 import SignUp from '../../components/SignUp-Form/SignUp.component';
-import Home from '../Home/Home';
+import Layout from "../../components/Layout/Layout";
+import VintageFashion from "../../components/words/Vintage_Fashion/Vintage_Fashion.component";
+
+function Register(){
 
 
+    return(
+        <>
+                
+        <Layout>
+            <div className="w-full flex flex-col">
+            < VintageFashion />
+            < SignUp />
+            </div>
+        </Layout>
+        
+        </>
 
-function App() {
-    const [user, setUser] = useState(null);
 
-    useEffect(() => {
-        firebase.auth().onAuthStateChanged(user => {
-            setUser(user);
-        })
-    }, []);
-
-    return (
-        <div className="">
-            {user ? <Home user={user} /> : <SignUp />}
-        </div>
     );
 }
 
-export default App;
+export default Register;

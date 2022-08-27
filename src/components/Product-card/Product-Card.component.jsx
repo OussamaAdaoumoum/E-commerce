@@ -27,7 +27,7 @@ function ProductCard({card}){
                     </div> 
                 </div>
                 <div className="flex flex-wrap flex-col font-Collingar items-center pt-2.5">
-                    <h2 className="text-Collingar text-white dark:text-white">{card.Name}</h2>
+                    <h2 className="text-Collingar text-center text-white dark:text-white">{card.Name}</h2>
                     <p className=" text-white dark:text-white">{card.price} $</p>
                 </div>
             </div>

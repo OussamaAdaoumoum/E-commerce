@@ -9,7 +9,6 @@ function Home(){
     return(
 
         <Layout>
-            ouhnlknuio
             <div className=" flex flex-wrap content-around ">
                 <VintageFashion />
                 <VintageDefinition />

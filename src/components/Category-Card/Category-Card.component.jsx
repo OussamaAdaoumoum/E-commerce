@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 function CategoryCard({ Category }) {
   return (
     <>
-      <div className=" flex flex-wrap flex-col h-auto font-Hatolie  content-center justify-center items-center ">
+      <div className=" flex flex-wrap flex-col h-auto font-Hatolie  content-center justify-center items-center">
         <div className="group relative">
           <img
             className="w-298 h-452 group-hover:opacity-70 duration-300 rounded-lg"
@@ -17,7 +17,7 @@ function CategoryCard({ Category }) {
               className="absolute transition duration-500 text-redlight-100 rounded-lg  px-3 lg:px-4.75 py-1 lg:py-1 mr-0.5 hover:text-black dark:hover:text-black  focus:outline-none text-5xl"
               to={Category.Name}
             >
-              {Category.Name}
+              {Category.Name.toUpperCase()}
             </Link>
           </div>
         </div>

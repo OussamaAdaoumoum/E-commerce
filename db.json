@@ -1,22 +1,22 @@
 {
     "Category": [
       {
-        "Name": "WOMENS",
+        "Name": "Womens",
         "pic": "https://www.americanvintage-store.com/dw/image/v2/BGNV_PRD/on/demandware.static/-/Sites-master-catalog/default/dwef06cd29/images/productPictures/H22/JAC51H22/JAC51H22-NAVY-MODEL-1-large.jpg?sw=720&sh=1125",
         "id": 1
       },
       {
-        "Name": "MENS",
+        "Name": "Mens",
         "pic": "https://www.americanvintage-store.com/dw/image/v2/BGNV_PRD/on/demandware.static/-/Sites-master-catalog/default/dwcc10e3d1/images/productPictures/H22/MWIP56H22/MWIP56H22-STONEP-MODEL-4-large.jpg?sw=720&sh=1125",
         "id": 2
       },
       {
-        "Name": "SHOES",
+        "Name": "Shoes",
         "pic": "https://www.americanvintage-store.com/dw/image/v2/BGNV_PRD/on/demandware.static/-/Sites-master-catalog/default/dw10dd715c/images/productPictures/H22/TAB10BH22/TAB10BH22-GRISCH-MODEL-1-large.jpg?sw=720&sh=1125",
         "id": 3
       },
       {
-        "Name": "BAGS",
+        "Name": "Bags",
         "pic": "https://www.americanvintage-store.com/dw/image/v2/BGNV_PRD/on/demandware.static/-/Sites-master-catalog/default/dwf3120621/images/productPictures/H22/PADO137H22/PADO137H22-MAST-MODEL-3-large.jpg?sw=720&sh=1125",
         "id": 4
       }

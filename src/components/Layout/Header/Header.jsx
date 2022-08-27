@@ -2,16 +2,41 @@ import { Link } from "react-router-dom";
 import { ReactComponent as YourSvg } from "../../../assets/pics/Loop.svg";
 import { useState, useEffect } from "react";
 import firebase from "../../../assets/firebase/firebase";
+import { BiCartAlt } from "react-icons/bi";
+
+import {
+  getFirestore,
+  collection,
+  query,
+  getDocs,
+  doc,
+} from "firebase/firestore";
 
 function NavBar() {
   const [user, setUser] = useState(null);
+  // const [nbrItems, setNbrItems] = useState(null);
 
   useEffect(() => {
     firebase.auth().onAuthStateChanged((user) => {
       setUser(user);
-      console.log(user.id);
+      // nbrItems();
     });
-  }, []); 
+  }, []);
+
+  // const nbrItems = async () => {
+  //   const currentUser = doc(getFirestore(), "users", user.uid);
+  //   const getUserCart = collection(currentUser, "cart");
+  //   const q = query(getUserCart);
+  //   const querySnapshot = await getDocs(q);
+
+  //   // var nbr =5 ;
+  //   // console.log('query est ', querySnapshot);
+  //   // querySnapshot.docs.forEach((item) => {
+
+  //   //  ++nbr;
+  //   // });
+  //   return querySnapshot.docs.length;
+  // };
 
   return (
     <>
@@ -79,10 +104,16 @@ function NavBar() {
           </div>
           <div className="flex items-center lg:order-2">
             {/* for log in  */}
-            {user ? 
+            {user ? (
               <>
-                <div>utgiu</div>
-            </>             : 
+                <Link to="/Stock">
+                  <BiCartAlt className="text-3xl" />
+                  <div className="absolute right-7 top-2 rounded-full bg-redlight-100 w-4 text-white text-xs text-center">
+                    {/* {console.log("nbr items hwa ", nbrItems)} */}5
+                  </div>
+                </Link>
+              </>
+            ) : (
               <>
                 <Link
                   className="transition duration-500 text-redlight-100 dark:text-redlight-100 hover:bg-redlight-100 hover:text-white rounded-lg text-sm px-3 lg:px-4.75 py-1 lg:py-1.25 mr-2 dark:hover:bg-redlight-200 focus:outline-none "
@@ -97,7 +128,7 @@ function NavBar() {
                   Register
                 </Link>
               </>
-            }
+            )}
 
             {/* <button data-collapse-toggle="mobile-menu-2" type="button" className="inline-flex items-center p-2 ml-1 text-sm text-gray-500 rounded-lg lg:hidden hover:bg-gray-100 focus:outline-none focus:ring-2  dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600" aria-controls="mobile-menu-2" aria-expanded="false">
                         <span className="sr-only">Open main menu</span>
