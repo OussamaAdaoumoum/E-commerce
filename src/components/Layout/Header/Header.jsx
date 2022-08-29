@@ -10,6 +10,7 @@ import {
   query,
   getDocs,
   doc,
+  onSnapshot
 } from "firebase/firestore";
 import Switcher from "../../Switcher/Switcher.component";
 function NavBar() {
@@ -27,7 +28,12 @@ function NavBar() {
     const currentUser = doc(getFirestore(), "users", user.uid);
     const getUserCart = collection(currentUser, "cart");
     const q = query(getUserCart);
-    const querySnapshot = await getDocs(q);
+    onSnapshot(q, async (querySnapshot) => {
+      setNbr(querySnapshot.docs.length);
+
+    })
+
+    // const querySnapshot = await getDocs(q);
 
     // var nbr =5 ;
     // console.log('query est ', querySnapshot);
@@ -36,9 +42,8 @@ function NavBar() {
     //  ++nbr;
     // });
 
-    console.log("query est ", querySnapshot.docs.length);
+    // console.log("query est ", querySnapshot.docs.length);
 
-    setNbr(querySnapshot.docs.length);
   };
   return (
     <>

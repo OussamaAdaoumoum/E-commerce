@@ -74,7 +74,7 @@ function ItemView({ handleModal, card }) {
   return (
     <>
       <div className=" py-6 sm:py-8 lg:py-12">
-        <div className="max-w-[70vw] bg-[#D9D9D9] px-4 md:px-8 mx-auto rounded-lg relative ">
+        <div className="max-w-[70vw] bg-[#D9D9D9] px-4 md:px-8 mx-auto rounded-lg relative shadow-2xl">
           <div className=" grid md:grid-cols-2 gap-8">
             {/* <!-- images - start --> */}
             <div className="grid lg:grid-cols-5 gap-4">

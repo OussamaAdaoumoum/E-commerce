@@ -12,8 +12,8 @@ function ProductCard({card}){
 
         <>
 
-            <div className="flex flex-wrap flex-col font-Collingar content-center justify-center items-center p-12" >
-                <div className="group relative">
+            <div className="flex flex-wrap flex-col font-Collingar content-center justify-center items-center p-12 " >
+                <div className="group relative shadow-2xl hover:shadow-[#1c0000] rounded-lg">
                     <img  className="w-298 h-452 group-hover:opacity-0 duration-300 rounded-lg text-white dark:text-white" src={card.pic1} alt="product card"/>
                     <img className="opacity-0 group-hover:opacity-60 duration-700 w-298 h-452 absolute inset-x-0 bottom-0 flex justify-center rounded-lg"    src={card.pic2} alt="hoverImage" />
                     <div className="absolute top-0 left-0 w-298 h-452 flex flex-col justify-center items-center opacity-0  group-hover:opacity-100 duration-500">
@@ -27,8 +27,8 @@ function ProductCard({card}){
                     </div> 
                 </div>
                 <div className="flex flex-wrap flex-col font-Collingar items-center pt-2.5">
-                    <h2 className="text-Collingar text-center text-white dark:text-white">{card.Name}</h2>
-                    <p className=" text-white dark:text-white">{card.price} $</p>
+                    <h2 className="text-Collingar text-center dark:text-[#FFF] text-[#0e0000] font-bold">{card.Name}</h2>
+                    <p className=" dark:text-[#FFF] text-[#0e0000] font-bold">{card.price} $</p>
                 </div>
             </div>
 
