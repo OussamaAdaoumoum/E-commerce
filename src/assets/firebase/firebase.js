@@ -52,7 +52,7 @@ export const registerWithEmailAndPassword = async (name, email, password) => {
   try {
     const res = await auth.createUserWithEmailAndPassword(email, password);
     const user = res.user;
-    await addDoc(collection(db, "users"), {
+    await setDoc(doc(db, "users", user.uid), {
       uid: user.uid,
       name,
       authProvider: "local",

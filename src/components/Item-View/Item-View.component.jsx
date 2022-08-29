@@ -16,9 +16,12 @@ import {
 } from "firebase/firestore";
 
 import { useState, useEffect } from "react";
-
+import {useLocation} from 'react-router-dom';
 function ItemView({ handleModal, card }) {
   const [user, setUser] = useState(null);
+  console.log("card data ", card);
+  const location = useLocation();
+
 
   useEffect(() => {
     firebase.auth().onAuthStateChanged((user) => {
@@ -40,11 +43,11 @@ function ItemView({ handleModal, card }) {
 
     // const getCartDocs = getDocs(getUserCart);
 
-    window._items = querySnapshot.docs;
+    // window._items = querySnapshot.docs;
     // const cartItems = querySnapshot.docs.forEach((item) => item.data());
     let changed = false;
+    let page = window.location.pathname;
     querySnapshot.docs.forEach((item) => {
-      console.log("item data ", item);
       if (item.data().cartId === card.id) {
         updateDoc(item.ref, {
           itemsNbr: increment(1),
@@ -59,6 +62,7 @@ function ItemView({ handleModal, card }) {
       addDoc(getUserCart, {
         cartId: card.id,
         itemsNbr: 1,
+        Type: page.substring(1),
       });
     }
 

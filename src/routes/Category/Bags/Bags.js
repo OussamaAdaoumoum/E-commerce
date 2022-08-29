@@ -3,21 +3,37 @@ import ProductCard from "../../../components/Product-card/Product-Card.component
 import Layout from "../../../components/Layout/Layout";
 import OneWord from '../../../components/words/OneWord/OneWord';
 
+import firebase from "firebase/compat/app";
+import {
+  getFirestore,
+  doc,
+  setDoc,
+} from "firebase/firestore";
 
 function Shoes(){
     const [items, setItems] = useState(null);
 
     const fetchData = async () => {
-        await fetch("http://localhost:3000/Shoes")
-        .then((response) => response.json())
-        .then((data) => setItems(data))
-         .catch((error) => console.log(error));
-    };
-
-    useEffect(() => {
+        await fetch("http://localhost:3000/Bags")
+          .then((response) => response.json())
+          .then(async (data) => {
+        //    const col = collection(getFirestore(), "items");
+       //     const o = getDocs(col);
+          
+              data.forEach((el) => {
+                const d = doc(getFirestore(), "Bags", "" + el.id);
+                setDoc(d, el);
+              });
+            
+            return setItems(data);
+          })
+          .catch((error) => console.log(error));
+      };
+    
+      useEffect(() => {
         fetchData();
-    }, []);
-
+      }, []);
+    
 
 
     return(

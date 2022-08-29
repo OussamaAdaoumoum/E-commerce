@@ -8,6 +8,7 @@ import Shoes from './routes/Category/Shoes/Shoes';
 import LogIn from './routes/LogIn/LogIn';
 import Register from './routes/SignUp/SignUp';
 import Stock from "./routes/Stock/Stock";
+import Switcher from './components/Switcher/Switcher.component'
 function App() {
 
   return (
@@ -22,6 +23,7 @@ function App() {
           <Route path="/Stock" element={<Stock />} />          
           <Route path="/LogIn" element={<LogIn />} />
           <Route path="/SignUp" element={<Register />} />
+          <Route path="/Switcher" element={<Switcher />} />
 
           
           <Route path="*" element={<Home />} />

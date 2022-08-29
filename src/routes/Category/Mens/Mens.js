@@ -26,7 +26,7 @@ function Mens() {
    //     const o = getDocs(col);
       
           data.forEach((el) => {
-            const d = doc(getFirestore(), "items", "" + el.id);
+            const d = doc(getFirestore(), "Mens", "" + el.id);
             setDoc(d, el);
           });
         

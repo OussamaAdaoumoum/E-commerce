@@ -11,33 +11,35 @@ import {
   getDocs,
   doc,
 } from "firebase/firestore";
-
+import Switcher from "../../Switcher/Switcher.component";
 function NavBar() {
   const [user, setUser] = useState(null);
-  // const [nbrItems, setNbrItems] = useState(null);
+  const [nbr, setNbr] = useState(null);
 
   useEffect(() => {
     firebase.auth().onAuthStateChanged((user) => {
       setUser(user);
-      // nbrItems();
+      nbrItems(user);
     });
   }, []);
+  
+  const nbrItems = async (user) => {
+    const currentUser = doc(getFirestore(), "users", user.uid);
+    const getUserCart = collection(currentUser, "cart");
+    const q = query(getUserCart);
+    const querySnapshot = await getDocs(q);
 
-  // const nbrItems = async () => {
-  //   const currentUser = doc(getFirestore(), "users", user.uid);
-  //   const getUserCart = collection(currentUser, "cart");
-  //   const q = query(getUserCart);
-  //   const querySnapshot = await getDocs(q);
+    // var nbr =5 ;
+    // console.log('query est ', querySnapshot);
+    // querySnapshot.docs.forEach((item) => {
 
-  //   // var nbr =5 ;
-  //   // console.log('query est ', querySnapshot);
-  //   // querySnapshot.docs.forEach((item) => {
+    //  ++nbr;
+    // });
 
-  //   //  ++nbr;
-  //   // });
-  //   return querySnapshot.docs.length;
-  // };
+    console.log("query est ", querySnapshot.docs.length);
 
+    setNbr(querySnapshot.docs.length);
+  };
   return (
     <>
       <nav className=" px-4 lg:px-6 py-2.5 w-full">
@@ -106,12 +108,15 @@ function NavBar() {
             {/* for log in  */}
             {user ? (
               <>
-                <Link to="/Stock">
-                  <BiCartAlt className="text-3xl" />
-                  <div className="absolute right-7 top-2 rounded-full bg-redlight-100 w-4 text-white text-xs text-center">
-                    {/* {console.log("nbr items hwa ", nbrItems)} */}5
-                  </div>
-                </Link>
+                <div className="flex ">
+                  <Switcher />
+                  <Link to="/Stock" className="pl-7">
+                    <BiCartAlt className="text-3xl text-black dark:text-[#fff]" />
+                    <div className="absolute right-7 top-2 rounded-full bg-redlight-100 w-4 text-white text-xs text-center">
+                      {nbr}
+                    </div>
+                  </Link>
+                </div>
               </>
             ) : (
               <>
