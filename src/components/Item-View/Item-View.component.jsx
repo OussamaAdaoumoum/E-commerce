@@ -6,21 +6,19 @@ import {
   getFirestore,
   collection,
   addDoc,
-  where,
   query,
   getDocs,
   doc,
   increment,
-  setDoc,
   updateDoc,
 } from "firebase/firestore";
 
 import { useState, useEffect } from "react";
-import {useLocation} from 'react-router-dom';
+
+
 function ItemView({ handleModal, card }) {
   const [user, setUser] = useState(null);
   console.log("card data ", card);
-  const location = useLocation();
 
 
   useEffect(() => {
@@ -55,6 +53,7 @@ function ItemView({ handleModal, card }) {
         // item.update({
         //   itemsNbr: increment(1),
         // });
+        console.log('haaaaaaaaaaaaaahwa item', item.ref);
         changed = true;
       }
     });

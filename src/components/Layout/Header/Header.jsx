@@ -115,7 +115,7 @@ function NavBar() {
               <>
                 <div className="flex ">
                   <Switcher />
-                  <Link to="/Stock" className="pl-7">
+                  <Link to="/Stock" className="pl-7 z-50">
                     <BiCartAlt className="text-3xl text-black dark:text-[#fff]" />
                     <div className="absolute right-7 top-2 rounded-full bg-redlight-100 w-4 text-white text-xs text-center">
                       {nbr}
