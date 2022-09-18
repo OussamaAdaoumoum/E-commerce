@@ -2,7 +2,7 @@ import { useMemo } from "react";
 import { GoogleMap, useLoadScript, Marker } from '@react-google-maps/api';
 
 function Map() {
-  const center = useMemo(() => ({ lat: 44, lng: -80 }), []);
+  const center = useMemo(() => ({ lat: 31.6298, lng: -8.0101 }), []);
 
   return (
     <GoogleMap zoom={10} center={center} mapContainerClassName="w-52 h-36 dark:bg-white bg-white  rounded-md ">

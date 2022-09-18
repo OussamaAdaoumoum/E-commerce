@@ -77,7 +77,7 @@ function ItemView({ handleModal, card }) {
           <div className=" grid md:grid-cols-2 gap-8">
             {/* <!-- images - start --> */}
             <div className="grid lg:grid-cols-5 gap-4">
-              <div className="lg:col-span-4 bg-[#D9D9D9]  overflow-hidden relative">
+              <div className="lg:col-span-4 bg-[#D9D9D9] overflow-hidden relative ">
                 <img
                   src={card.pic1}
                   loading="lazy"
@@ -86,7 +86,7 @@ function ItemView({ handleModal, card }) {
                 />
               </div>
 
-              <div className="flex lg:flex-col order-last lg:order-none gap-4">
+              <div className="flex lg:flex-col order-last lg:order-none gap-4 ">
                 <div className="bg-[#D9D9D9] rounded-lg overflow-hidden">
                   <img
                     src={card.pic2}
@@ -118,7 +118,7 @@ function ItemView({ handleModal, card }) {
             {/* <!-- images - end --> */}
 
             {/* <!-- content - start --> */}
-            <div className="md:py-8">
+            <div className="md:py-8 flex flex-col justify-between">
               {/* <!-- name - start --> */}
               <div className="mb-2 md:mb-3">
                 <h2 className="text-gray-800 text-2xl lg:text-3xl font-Helvetica font-bold">
@@ -134,7 +134,7 @@ function ItemView({ handleModal, card }) {
               {/* <!-- name - end --> */}
 
               {/* <!-- color - start --> */}
-              <div className="mb-4 md:mb-6">
+              {/* <div className="mb-4 md:mb-6">
                 <span className="inline-block text-gray-500 text-sm md:text-base font-semibold mb-3">
                   Color
                 </span>
@@ -154,11 +154,11 @@ function ItemView({ handleModal, card }) {
                     className="w-8 h-8 bg-white border hover:ring-gray-200 rounded-full transition duration-100"
                   ></button>
                 </div>
-              </div>
+              </div> */}
               {/* <!-- color - end --> */}
 
               {/* <!-- size - start --> */}
-              <div className="mb-8 md:mb-10">
+              {/* <div className="mb-8 md:mb-10">
                 <span className="inline-block text-gray-500 text-sm md:text-base font-semibold mb-3">
                   Size
                 </span>
@@ -189,7 +189,7 @@ function ItemView({ handleModal, card }) {
                     XL
                   </span>
                 </div>
-              </div>
+              </div> */}
               {/* <!-- size - end --> */}
 
               {/* <!-- price - start --> */}
@@ -232,7 +232,8 @@ function ItemView({ handleModal, card }) {
               {/* <!-- shipping notice - end --> */}
 
               {/* <!-- buttons - start --> */}
-              <div className="flex gap-2.5 justify-center">
+              <div className="content-end	justify-self-end	">
+                <div className="flex gap-2.5 justify-center ">
                 <button
                   onClick={addToCard}
                   className="inline-block flex-1 sm:flex-none bg-redlight-100 hover:bg-redlight-200 active:bg-redlight-500 focus-visible:ring ring-indigo-300 text-white text-sm md:text-base font-semibold text-center rounded-lg outline-none transition duration-100 px-8 py-3"
@@ -247,6 +248,8 @@ function ItemView({ handleModal, card }) {
                   Buy now
                 </Link>
               </div>
+              </div>
+
               {/* <!-- buttons - end --> */}
             </div>
             {/* <!-- content - end --> */}
