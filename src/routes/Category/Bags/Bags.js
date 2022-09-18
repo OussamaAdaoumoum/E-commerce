@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from "react";
 import ProductCard from "../../../components/Product-card/Product-Card.component"
-import Layout from "../../../components/Layout/Layout";
 import OneWord from '../../../components/words/OneWord/OneWord';
 
 import firebase from "firebase/compat/app";
@@ -39,11 +38,10 @@ function Shoes(){
     return(
         <>
                 {items && 
-        <Layout>
             <div className="w-full flex flex-col">
 
             
-            < OneWord Word="Shoes"/>
+            < OneWord Word="Bags" size="text-4xl"/>
 
             <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
             {/* <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-6"> */}
@@ -55,7 +53,6 @@ function Shoes(){
             }
             </div>
             </div>
-        </Layout>
         }
         </>
 
