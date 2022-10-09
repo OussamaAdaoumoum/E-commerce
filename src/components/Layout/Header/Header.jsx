@@ -94,9 +94,9 @@ function NavBar() {
               <li>
                 <Link
                   className="block transition duration-500 text-redlight-100  hover:bg-redlight-200 rounded-lg text-sm px-3 lg:px-4.75 py-1 lg:py-1 mr-0.5 hover:text-white dark:hover:text-white dark:hover:bg-redlight-200 focus:outline-none"
-                  to="/Bags"
+                  to="/Hats"
                 >
-                  Bags
+                  Hats
                 </Link>
               </li>
               <li>

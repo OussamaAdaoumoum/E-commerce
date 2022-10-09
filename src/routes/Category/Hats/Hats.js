@@ -9,18 +9,18 @@ import {
   setDoc,
 } from "firebase/firestore";
 
-function Shoes(){
+function Hats(){
     const [items, setItems] = useState(null);
 
     const fetchData = async () => {
-        await fetch("http://localhost:3000/Bags")
+        await fetch("http://localhost:3000/Hats")
           .then((response) => response.json())
           .then(async (data) => {
         //    const col = collection(getFirestore(), "items");
        //     const o = getDocs(col);
           
               data.forEach((el) => {
-                const d = doc(getFirestore(), "Bags", "" + el.id);
+                const d = doc(getFirestore(), "Hats", "" + el.id);
                 setDoc(d, el);
               });
             
@@ -60,4 +60,4 @@ function Shoes(){
     );
 }
 
-export default Shoes;
+export default Hats;

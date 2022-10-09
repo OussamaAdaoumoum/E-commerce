@@ -3,7 +3,7 @@ import Home from "./routes/Home/Home";
 import "./App.css";
 import Mens from './routes/Category/Mens/Mens';
 import Womens from './routes/Category/Womens/Womens';
-import Bags from './routes/Category/Bags/Bags';
+import Hats from './routes/Category/Hats/Hats';
 import Shoes from './routes/Category/Shoes/Shoes';
 import LogIn from './routes/LogIn/LogIn';
 import Register from './routes/SignUp/SignUp';
@@ -18,7 +18,7 @@ function App() {
           <Route path="/Shop" element={<Home />} />
           <Route path="/Mens" element={<Mens />} />
           <Route path="/Womens" element={<Womens />} />
-          <Route path="/Bags" element={<Bags />} />
+          <Route path="/Hats" element={<Hats />} />
           <Route path="/Shoes" element={<Shoes />} />
           <Route path="/Stock" element={<Stock />} />          
           <Route path="/LogIn" element={<LogIn />} />

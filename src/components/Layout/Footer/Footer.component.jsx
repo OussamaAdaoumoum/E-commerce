@@ -44,7 +44,7 @@ function Footer(){
                         <Link className="transition duration-200 hover:text-redlight-100 text-black dark:text-white dark:hover:text-redlight-100 " to="/Shoes" >Shoes</Link>
                         </li>
                         <li>
-                        <Link className="transition duration-200 hover:text-redlight-100 text-black dark:text-white dark:hover:text-redlight-100" to="/Bags" >Bags</Link>
+                        <Link className="transition duration-200 hover:text-redlight-100 text-black dark:text-white dark:hover:text-redlight-100" to="/Hats" >Hats</Link>
                         </li>
                     </ul>
                 </div>
